@@ -1,0 +1,14 @@
+{
+  "name": "artbyarianne",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Art by Arianne — static site for original fine art by Jas Rogers.",
+  "scripts": {
+    "dev": "serve public -l 3000",
+    "start": "serve public -l 3000",
+    "build": "echo \"No build step required for static site\""
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
+  }
+}
