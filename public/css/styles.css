@@ -116,7 +116,7 @@ body.fade-out {
   height: 41px;
   object-fit: contain;
   flex-shrink: 0;
-  transform: translateY(3px);
+  transform: translateY(5px);
 }
 
 /* Desktop links */
@@ -403,23 +403,8 @@ body.fade-out {
   position: relative;
 }
 
-.artwork-item__img-wrap::after {
-  content: 'View';
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--white);
-  background: rgba(26,26,26,0);
-  transition: background 0.3s var(--ease);
-}
-
 .artwork-item__img-wrap:hover::after {
-  background: rgba(26,26,26,0.28);
+  background: rgba(26,26,26,0.18);
 }
 
 .artwork-item__img {
