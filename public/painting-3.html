@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Painting 03 — Original painting by Jas Rogers." />
+  <meta name="theme-color" content="#F5F0EB" />
+  <title>Painting 03 — Art by Arianne</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-rat.png" alt="Art by Arianne logo" class="nav__logo-img" />
+          Art by Arianne
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="nav__burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main class="page">
+
+    <div class="gallery-hero">
+      <p class="section-label"><a href="paintings.html" class="breadcrumb">Paintings</a></p>
+      <h1 class="section-title">03</h1>
+    </div>
+
+    <section class="artwork-detail">
+
+      <div class="artwork-detail__gallery" data-viewer>
+        <div class="artwork-detail__thumbs" role="list" aria-label="Image views">
+          <button type="button" class="artwork-detail__thumb is-active" role="listitem" aria-current="true"
+                  data-full="images/painting-3-main.jpg" data-alt="Painting 03 — full view">
+            <img src="images/painting-3-main.jpg" alt="Painting 03 — full view thumbnail" />
+          </button>
+          <button type="button" class="artwork-detail__thumb" role="listitem" aria-current="false"
+                  data-full="images/painting-3-detail.jpg" data-alt="Painting 03 — detail view">
+            <img src="images/painting-3-detail.jpg" alt="Painting 03 — detail view thumbnail" />
+          </button>
+        </div>
+
+        <div class="artwork-detail__main" role="button" tabindex="0"
+             aria-label="Zoom painting 03 — click to open full screen viewer">
+          <img id="viewer-main" class="artwork-detail__main-img"
+               src="images/painting-3-main.jpg" alt="Painting 03 — full view" />
+          <span class="artwork-detail__zoom-hint" aria-hidden="true">Click to zoom</span>
+        </div>
+      </div>
+
+      <p class="artwork-detail__desc">
+        Dozens of bandana squares overlap in a dense, quilted collage of dots, florals and paisley.
+        Inky blues and deep reds hold the composition together while a single blue-bordered panel of
+        dragons and blossoms quietly draws the eye to the centre.
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2028 Art by Arianne &mdash; Jas</p>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/artwork.js"></script>
+</body>
+</html>
