@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Jas Rogers — the artist behind Art by Arianne." />
+  <meta name="theme-color" content="#F5F0EB" />
+  <title>About — Art by Arianne</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-rat.png" alt="Art by Arianne logo" class="nav__logo-img" />
+          Art by Arianne
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="nav__burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main class="page">
+    <div class="about-wrap">
+
+      <!-- Sticky portrait image -->
+      <aside class="about-image">
+        <img src="images/artwork-6.jpg"
+             alt="Close Work — ink sketch of an artist leaning in closely to examine a canvas"
+             class="about-image__img" />
+        <p class="about-image__caption">Close Work, 2024 &mdash; detail</p>
+      </aside>
+
+      <!-- Text content -->
+      <div class="about-content">
+        <p class="section-label">The artist</p>
+        <h1 class="section-title">Jas</h1>
+
+        <p>
+          Jas is an independent artist working primarily in acrylic. Her practice centres
+          on the accurate representation of fabrics and textiles, exploring
+          the subtle interplay of light, pattern, and form.
+        </p>
+
+        <p>
+          She finds most of her subjects in warm interior spaces &mdash; in vintage furniture,
+          utility fabrics, and the lived-in textures of domestic comfort. Each work is
+          a careful study of material and moment.
+        </p>
+
+        <div class="about-divider"></div>
+
+        <div class="about-detail" style="margin-bottom:1.4rem;">
+          <span class="about-detail__label">Medium</span>
+          <span class="about-detail__val">Acrylic on paper</span>
+        </div>
+
+        <div class="about-detail" style="margin-bottom:2rem;">
+          <span class="about-detail__label">Based in</span>
+          <span class="about-detail__val">Melbourne, Australia</span>
+        </div>
+
+        <a href="gallery.html" class="btn">View All Works</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2028 Art by Arianne &mdash; Jas</p>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

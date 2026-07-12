@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery — Original paintings by Jas Rogers. Browse all available works." />
+  <meta name="theme-color" content="#F5F0EB" />
+  <title>Gallery — Art by Arianne</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-rat.png" alt="Art by Arianne logo" class="nav__logo-img" />
+          Art by Arianne
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="nav__burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main class="page">
+
+    <!-- Gallery heading -->
+    <div class="gallery-hero">
+      <p class="section-label">Works by Jas Rogers</p>
+      <h1 class="section-title">Gallery</h1>
+    </div>
+
+    <!-- Artwork list (vertically scrollable) -->
+    <section class="gallery-list" aria-label="Artworks">
+
+      <!-- 01 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="View larger image of Studio Session"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-1.jpg"
+               alt="Studio Session — ink sketch of a person working at a desk surrounded by plants and cards on the floor"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">01</p>
+          <h2 class="artwork-item__title">Studio Session</h2>
+          <p class="artwork-item__meta">Ink on paper &mdash; 2024</p>
+          <p class="artwork-item__desc">
+            Viewed from above, a figure is absorbed in quiet work at a cluttered desk.
+            Plants crowd the windowsill behind them, cards are spread across the floor,
+            and a small heart floats in the corner &mdash; a moment of focused, loving labour.
+          </p>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="View larger image of Three of a Kind"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-2.jpg"
+               alt="Three of a Kind — ink sketch of three monkeys hanging from a branch with hearts on either side"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">02</p>
+          <h2 class="artwork-item__title">Three of a Kind</h2>
+          <p class="artwork-item__meta">Ink on paper &mdash; 2024</p>
+          <p class="artwork-item__desc">
+            Three monkeys cling together on a single branch, their fur rendered in dense,
+            expressive crosshatching. Two small hearts frame the composition &mdash; an
+            affectionate, lively study of togetherness and shared weight.
+          </p>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="View larger image of Taking Stock"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-3.jpg"
+               alt="Taking Stock — ink sketch of a person sitting on the floor sorting through belongings"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">03</p>
+          <h2 class="artwork-item__title">Taking Stock</h2>
+          <p class="artwork-item__meta">Ink on paper &mdash; 2024</p>
+          <p class="artwork-item__desc">
+            A figure kneels on a bare floor, surrounded by the accumulated objects of
+            a life &mdash; bags, books, shoes, small things. There is patience in the
+            posture and a quiet heart drawn nearby to mark the moment.
+          </p>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="View larger image of At the Easel"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4.jpg"
+               alt="At the Easel — ink sketch of an artist seen from behind, painting on a canvas with houseplants on either side"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">04</p>
+          <h2 class="artwork-item__title">At the Easel</h2>
+          <p class="artwork-item__meta">Ink on paper &mdash; 2024</p>
+          <p class="artwork-item__desc">
+            An artist sits before a large canvas depicting animals on a landscape, flanked
+            by potted plants on either side. Seen only from behind, the figure is fully
+            absorbed &mdash; a portrait of the creative act from the outside in.
+          </p>
+        </div>
+      </article>
+
+      <!-- 05 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="View larger image of Together"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-5.jpg"
+               alt="Together — ink sketch of two people sitting side by side under a hanging plant with small hearts scattered around"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">05</p>
+          <h2 class="artwork-item__title">Together</h2>
+          <p class="artwork-item__meta">Ink on paper &mdash; 2024</p>
+          <p class="artwork-item__desc">
+            A bearded man and a woman with long hair and glasses sit close, a trailing
+            plant cascading above them. Three small hearts are scattered through the
+            composition &mdash; an intimate, unhurried sketch of companionship.
+          </p>
+        </div>
+      </article>
+
+      <!-- 06 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="View larger image of Close Work"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-6.jpg"
+               alt="Close Work — ink sketch of a curly-haired artist leaning in closely to examine a canvas"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">06</p>
+          <h2 class="artwork-item__title">Close Work</h2>
+          <p class="artwork-item__meta">Ink on paper &mdash; 2024</p>
+          <p class="artwork-item__desc">
+            A curly-haired figure leans in close to their canvas, face inches from the
+            surface, scrutinising. The profile is sharp and intent. A small heart sits
+            quietly in the upper corner &mdash; devotion made visible.
+          </p>
+        </div>
+      </article>
+
+      <!-- 07 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="View larger image of Spin"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-7.jpg"
+               alt="Spin — ink sketch of a figure riding a stationary exercise bike"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">07</p>
+          <h2 class="artwork-item__title">Spin</h2>
+          <p class="artwork-item__meta">Ink on paper &mdash; 2024</p>
+          <p class="artwork-item__desc">
+            A lone figure on a stationary bike, cap on, leaning into the handlebars.
+            The machinery is rendered with clean, economic lines while the rider is
+            dark and weighted &mdash; effort and stillness occupying the same frame.
+          </p>
+        </div>
+      </article>
+
+      <!-- 08 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="View larger image of Hands &amp; Chair"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-8.jpg"
+               alt="Hands and Chair — ink sketch of two hands holding a small fly against a large textured chair back"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">08</p>
+          <h2 class="artwork-item__title">Hands &amp; Chair</h2>
+          <p class="artwork-item__meta">Ink on paper &mdash; 2024</p>
+          <p class="artwork-item__desc">
+            Two hands meet at the centre of the frame, holding something tiny between
+            them &mdash; a small insect, a found thing. Behind them, the dense vertical
+            hatching of a upholstered chair fills the frame with texture and weight.
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ── Lightbox ────────────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close lightbox">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="18" y1="6"  x2="6"  y2="18"/>
+        <line x1="6"  y1="6"  x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img src="" alt="" class="lightbox__img" id="lightbox-img" />
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2028 Art by Arianne &mdash; Jas</p>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
