@@ -112,10 +112,11 @@ body.fade-out {
 .nav__logo:hover { opacity: 0.7; }
 
 .nav__logo-img {
-  width: 36px;
-  height: 36px;
+  width: 41px;
+  height: 41px;
   object-fit: contain;
   flex-shrink: 0;
+  transform: translateY(3px);
 }
 
 /* Desktop links */
