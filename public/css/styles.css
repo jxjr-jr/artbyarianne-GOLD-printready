@@ -606,8 +606,6 @@ body.fade-out {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  background: var(--white);
-  border: 1px solid var(--border);
   /* Fixed "blanket" area — constant height regardless of image aspect
      ratio, so swapping thumbnails never shifts the text below. */
   aspect-ratio: 4 / 3;
