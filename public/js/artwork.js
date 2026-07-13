@@ -24,7 +24,6 @@
     thumb.addEventListener('click', function () {
       var full = thumb.getAttribute('data-full');
       if (!full) return;
-      mainImg.style.transform = '';           /* reset any hover-zoom */
       mainImg.src = full;
       mainImg.alt = thumb.getAttribute('data-alt') || '';
       thumbs.forEach(function (t) {
@@ -35,21 +34,6 @@
       thumb.setAttribute('aria-current', 'true');
     });
   });
-
-  /* ── Desktop hover-magnify on the inline main image ───────── */
-  var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (canHover && mainWrap && mainImg) {
-    mainWrap.addEventListener('mousemove', function (e) {
-      var r = mainWrap.getBoundingClientRect();
-      var x = ((e.clientX - r.left) / r.width) * 100;
-      var y = ((e.clientY - r.top) / r.height) * 100;
-      mainImg.style.transformOrigin = x + '% ' + y + '%';
-      mainImg.style.transform = 'scale(2.1)';
-    });
-    mainWrap.addEventListener('mouseleave', function () {
-      mainImg.style.transform = '';
-    });
-  }
 
   /* ============================================================
      Fullscreen zoom / pan viewer

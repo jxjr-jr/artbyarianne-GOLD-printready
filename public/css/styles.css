@@ -605,16 +605,21 @@ body.fade-out {
 .artwork-detail__main {
   position: relative;
   overflow: hidden;
-  cursor: zoom-in;
+  cursor: pointer;
   background: var(--white);
   border: 1px solid var(--border);
+  /* Fixed "blanket" area — constant height regardless of image aspect
+     ratio, so swapping thumbnails never shifts the text below. */
+  aspect-ratio: 4 / 3;
+  max-height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .artwork-detail__main-img {
   width: 100%;
-  max-height: 76vh;
+  height: 100%;
   object-fit: contain;
-  transition: transform 0.35s var(--ease);
-  will-change: transform;
 }
 
 .artwork-detail__zoom-hint {
