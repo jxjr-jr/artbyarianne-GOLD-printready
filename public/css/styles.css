@@ -34,7 +34,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  background: linear-gradient(180deg, #F0EAD6 0%, #A49A87 100%);
+  background: linear-gradient(180deg, #E2DFD9 0%, #D9D5CD 100%);
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -42,7 +42,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--text);
-  background: linear-gradient(180deg, #F0EAD6 0%, #A49A87 100%);
+  background: linear-gradient(180deg, #E2DFD9 0%, #D9D5CD 100%);
   background-attachment: fixed;
   line-height: 1.6;
   min-height: 100vh;
@@ -232,7 +232,7 @@ body.fade-out {
   display: none;
   position: fixed;
   inset: 0;
-  background: linear-gradient(180deg, #F0EAD6 0%, #A49A87 100%);
+  background: linear-gradient(180deg, #E2DFD9 0%, #D9D5CD 100%);
   z-index: 150;
   flex-direction: column;
   align-items: center;
