@@ -119,6 +119,13 @@ body.fade-out {
   transform: translateY(5px);
 }
 
+.nav__by {
+  font-style: italic;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
 /* Desktop links */
 .nav__links {
   display: flex;
@@ -280,6 +287,13 @@ body.fade-out {
 .hero__title em {
   font-style: italic;
   font-weight: 400;
+}
+
+.hero__by {
+  font-style: italic;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .hero__sub {
