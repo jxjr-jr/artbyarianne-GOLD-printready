@@ -232,7 +232,7 @@ body.fade-out {
   display: none;
   position: fixed;
   inset: 0;
-  background: var(--bg);
+  background: linear-gradient(180deg, #CCCBCA 0%, #807E7E 100%);
   z-index: 150;
   flex-direction: column;
   align-items: center;
@@ -964,7 +964,6 @@ body.fade-out {
    FOOTER
    ============================================================ */
 .footer {
-  border-top: 1px solid var(--border);
   padding: 2rem;
 }
 
@@ -980,7 +979,7 @@ body.fade-out {
 
 .footer__copy {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--text);
   letter-spacing: 0.05em;
 }
 
@@ -991,12 +990,16 @@ body.fade-out {
 
 .footer__links a {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--text);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s ease;
+  display: inline-block;
 }
-.footer__links a:hover { color: var(--text); }
+.footer__links a:hover {
+  color: var(--text);
+  transform: scale(1.05);
+}
 
 /* ============================================================
    RESPONSIVE — TABLET
