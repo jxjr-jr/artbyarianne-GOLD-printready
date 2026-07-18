@@ -34,30 +34,19 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  background: linear-gradient(180deg, #E2DFD9 0%, #D0CBC2 100%);
-  background-attachment: fixed;
+  background-color: #f5f0eb;
   min-height: 100vh;
 }
 
 body {
   font-family: var(--font-body);
   color: var(--text);
-  background: linear-gradient(180deg, #E2DFD9 0%, #D0CBC2 100%);
-  background-attachment: fixed;
+  background-color: #f5f0eb;
   line-height: 1.6;
   min-height: 100vh;
   /* Page fade-in on load */
   opacity: 0;
   animation: pageFadeIn 0.55s var(--ease) forwards;
-}
-
-/* Structural wrappers must be transparent so the fixed gradient shows through */
-body > main,
-body > div,
-.wrapper,
-.container,
-.page {
-  background-color: transparent;
 }
 
 @keyframes pageFadeIn {
@@ -232,7 +221,7 @@ body.fade-out {
   display: none;
   position: fixed;
   inset: 0;
-  background: linear-gradient(180deg, #E2DFD9 0%, #D0CBC2 100%);
+  background-color: #f5f0eb;
   z-index: 150;
   flex-direction: column;
   align-items: center;
