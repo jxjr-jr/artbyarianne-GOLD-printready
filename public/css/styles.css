@@ -1046,14 +1046,17 @@ body.fade-out {
   .artwork-item__desc { max-width: none; }
 
 /* ============================================================
-   CONTACT PAGE — fixed viewport gradient (scoped to body.contact-page)
+   CONTACT PAGE — fixed viewport gradient
+   Must target both html AND body because html has its own
+   background-color: var(--bg) which sits behind the body layer.
    ============================================================ */
-body.contact-page {
-  /* Override the flat --bg colour with a fixed gradient */
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, #F2F0EF, #DAD4D2);
-  background-attachment: fixed;
-  background-size: cover;
+html.contact-html,
+html.contact-html body.contact-page {
+  background-color: #F2F0EF !important;
+  background-image: linear-gradient(to bottom, #F2F0EF, #DAD4D2) !important;
+  background-attachment: fixed !important;
+  background-size: 100% 100vh !important;
+  background-repeat: no-repeat !important;
   min-height: 100vh;
 }
 
