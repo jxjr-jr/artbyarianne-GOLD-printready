@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sketches — Ink drawings by Jas Rogers." />
+  <meta name="theme-color" content="#F5F0EB" />
+  <title>Sketches — Art by Arianne</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-rat.png" alt="Art by Arianne logo" class="nav__logo-img" />
+          Art <span class="nav__by">by</span> Arianne
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" data-text="Home">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="about.html" data-text="About">About</a></li>
+          <li><a href="contact.html" data-text="Contact">Contact</a></li>
+        </ul>
+
+        <button class="nav__burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+      <a href="index.html" data-text="Home">Home</a>
+      <a href="gallery.html" data-text="Gallery">Gallery</a>
+      <a href="about.html" data-text="About">About</a>
+      <a href="contact.html" data-text="Contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main class="page">
+
+    <div class="gallery-hero">
+      <p class="section-label"><a href="gallery.html" class="breadcrumb">Gallery</a></p>
+      <h1 class="section-title">Sketches</h1>
+    </div>
+
+    <section class="gallery-list" aria-label="Sketch artworks">
+
+      <!-- 01 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="He Do Scans"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-1.jpg"
+               alt="He Do Scans — ink sketch of a person working at a desk surrounded by plants and cards on the floor"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">01</p>
+          <h2 class="artwork-item__title">He Do Scans</h2>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Monke"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-2.jpg"
+               alt="Monke — ink sketch of three monkeys hanging from a branch"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">02</p>
+          <h2 class="artwork-item__title">Monke</h2>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Laundry"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-3.jpg"
+               alt="Laundry — ink sketch of a person sitting on the floor sorting through belongings"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">03</p>
+          <h2 class="artwork-item__title">Laundry</h2>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Sit"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4.jpg"
+               alt="Sit — ink sketch of an artist seen from behind, painting on a canvas"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">04</p>
+          <h2 class="artwork-item__title">Sit</h2>
+        </div>
+      </article>
+
+      <!-- 05 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Together"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-5.jpg"
+               alt="Together — ink sketch of two people sitting side by side under a hanging plant"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">05</p>
+          <h2 class="artwork-item__title">Together</h2>
+        </div>
+      </article>
+
+      <!-- 06 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Puncture"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-6.jpg"
+               alt="Puncture — ink sketch of a curly-haired artist leaning in closely to examine a canvas"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">06</p>
+          <h2 class="artwork-item__title">Puncture</h2>
+        </div>
+      </article>
+
+      <!-- 07 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Fernwood"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-7.jpg"
+               alt="Fernwood — ink sketch of a figure riding a stationary exercise bike"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">07</p>
+          <h2 class="artwork-item__title">Fernwood</h2>
+        </div>
+      </article>
+
+      <!-- 08 -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Joppa"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-8.jpg"
+               alt="Joppa — ink sketch of two hands holding a small fly against a large textured chair back"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">08</p>
+          <h2 class="artwork-item__title">Joppa</h2>
+        </div>
+      </article>
+
+      <!-- 09 — Farro -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Farro"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4263.jpg"
+               alt="Farro — ink sketch of a figure seated on a stool reading a book"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">09</p>
+          <h2 class="artwork-item__title">Farro</h2>
+        </div>
+      </article>
+
+      <!-- 10 — Rugged & Striking -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Rugged &amp; Striking"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4264.jpg"
+               alt="Rugged &amp; Striking — ink sketch of a figure in a natural pool surrounded by lush foliage"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">10</p>
+          <h2 class="artwork-item__title">Rugged &amp; Striking</h2>
+        </div>
+      </article>
+
+      <!-- 11 — Tasty -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Tasty"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4265.jpg"
+               alt="Tasty — ink sketch of two halved fruit or grain pieces"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">11</p>
+          <h2 class="artwork-item__title">Tasty</h2>
+        </div>
+      </article>
+
+      <!-- 12 — Book Club -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Book Club"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4266.jpg"
+               alt="Book Club — ink sketch of a figure lying down reading an open book surrounded by plants and furniture"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">12</p>
+          <h2 class="artwork-item__title">Book Club</h2>
+        </div>
+      </article>
+
+      <!-- 13 — 110cc -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="110cc"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4267.jpg"
+               alt="110cc — ink sketch of a helmeted figure standing beside a scooter in front of a fence and tree"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">13</p>
+          <h2 class="artwork-item__title">110cc</h2>
+        </div>
+      </article>
+
+      <!-- 14 — Box Sorter -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Box Sorter"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4268.jpg"
+               alt="Box Sorter — ink sketch of a bearded man surrounded by stacked rectangular boxes, one bearing a small heart"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">14</p>
+          <h2 class="artwork-item__title">Box Sorter</h2>
+        </div>
+      </article>
+
+      <!-- 15 — Snack -->
+      <article class="artwork-item">
+        <div class="artwork-item__img-wrap" role="button" tabindex="0"
+             aria-label="Snack"
+             onkeydown="if(event.key==='Enter'||event.key===' ')this.click()">
+          <img src="images/artwork-4269.jpg"
+               alt="Snack — ink sketch of a figure leaning over a table with a mug and small container"
+               class="artwork-item__img" loading="lazy" />
+        </div>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">15</p>
+          <h2 class="artwork-item__title">Snack</h2>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ── Lightbox ────────────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close lightbox">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="18" y1="6"  x2="6"  y2="18"/>
+        <line x1="6"  y1="6"  x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img src="" alt="" class="lightbox__img" id="lightbox-img" />
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2028 Art by Arianne &mdash; Jas</p>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="gallery.html" data-text="Gallery">Gallery</a>
+        <a href="about.html" data-text="About">About</a>
+        <a href="contact.html" data-text="Contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

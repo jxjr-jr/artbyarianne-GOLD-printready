@@ -34,13 +34,14 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  background-color: var(--bg);
+  background-color: #f5f0eb;
+  min-height: 100vh;
 }
 
 body {
   font-family: var(--font-body);
   color: var(--text);
-  background-color: var(--bg);
+  background-color: #f5f0eb;
   line-height: 1.6;
   min-height: 100vh;
   /* Page fade-in on load */
@@ -106,16 +107,25 @@ body.fade-out {
   font-size: 1.35rem;
   font-weight: 600;
   letter-spacing: 0.01em;
+  word-spacing: -0.12em;
   color: var(--text);
   transition: opacity 0.2s;
 }
 .nav__logo:hover { opacity: 0.7; }
 
 .nav__logo-img {
-  width: 36px;
-  height: 36px;
+  width: 41px;
+  height: 41px;
   object-fit: contain;
   flex-shrink: 0;
+  transform: translateY(5px);
+}
+
+.nav__by {
+  font-style: italic;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 /* Desktop links */
@@ -130,21 +140,30 @@ body.fade-out {
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--muted);
   position: relative;
-  padding-bottom: 2px;
-  transition: color 0.2s;
+  /* Reserve space equal to the bold state so neighbours never shift */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.22s ease;
 }
+/* Hidden bold copy that holds the width open at all times */
 .nav__links a::after {
-  content: '';
-  position: absolute;
-  left: 0; bottom: 0;
-  width: 0; height: 1px;
-  background: var(--text);
-  transition: width 0.25s var(--ease);
+  content: attr(data-text);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
 }
-.nav__links a:hover::after,
-.nav__links a.active::after { width: 100%; }
+.nav__links a:hover {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
 
 /* Hamburger button */
 .nav__burger {
@@ -202,7 +221,7 @@ body.fade-out {
   display: none;
   position: fixed;
   inset: 0;
-  background: var(--bg);
+  background-color: #f5f0eb;
   z-index: 150;
   flex-direction: column;
   align-items: center;
@@ -227,8 +246,32 @@ body.fade-out {
   color: var(--text);
   position: relative;
   transition: opacity 0.2s;
+  /* Initial state for slide-up animation */
+  opacity: 0;
+  transform: translateY(8px);
 }
+.nav__mobile.open a {
+  animation: slideUpFade 0.35s var(--ease) forwards;
+  animation-fill-mode: forwards;
+}
+/* Staggered delays for each menu item */
+.nav__mobile a:nth-child(1) { animation-delay: 0ms; }
+.nav__mobile a:nth-child(2) { animation-delay: 60ms; }
+.nav__mobile a:nth-child(3) { animation-delay: 120ms; }
+.nav__mobile a:nth-child(4) { animation-delay: 180ms; }
 .nav__mobile a:hover { opacity: 0.6; }
+
+/* Keyframe animation: fade in and slide up */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* ============================================================
    LAYOUT HELPERS
@@ -279,6 +322,13 @@ body.fade-out {
 .hero__title em {
   font-style: italic;
   font-weight: 400;
+}
+
+.hero__by {
+  font-style: italic;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .hero__sub {
@@ -402,23 +452,8 @@ body.fade-out {
   position: relative;
 }
 
-.artwork-item__img-wrap::after {
-  content: 'View';
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--white);
-  background: rgba(26,26,26,0);
-  transition: background 0.3s var(--ease);
-}
-
 .artwork-item__img-wrap:hover::after {
-  background: rgba(26,26,26,0.28);
+  background: rgba(26,26,26,0.18);
 }
 
 .artwork-item__img {
@@ -461,6 +496,298 @@ body.fade-out {
   color: var(--muted);
   line-height: 1.75;
   max-width: 38ch;
+}
+
+/* ============================================================
+   GALLERY INDEX (parent gallery page — Sketches / Paintings)
+   ============================================================ */
+.gallery-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.gallery-index__card {
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.gallery-index__card:hover { opacity: 0.85; }
+
+.gallery-index__img-wrap {
+  overflow: hidden;
+}
+
+.gallery-index__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 0.55s var(--ease);
+}
+.gallery-index__card:hover .gallery-index__img {
+  transform: scale(1.04);
+}
+
+.gallery-index__label {
+  padding-top: 1rem;
+}
+
+.gallery-index__name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.gallery-index__sub {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Breadcrumb link in section-label */
+.breadcrumb {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb:hover { color: var(--text); }
+
+/* Coming soon placeholder */
+.paintings-coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.coming-soon-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .gallery-index {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+}
+
+/* Paintings index — linked image cards */
+.artwork-item__link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.artwork-item__link .artwork-item__img {
+  transition: transform 0.55s var(--ease);
+}
+.artwork-item__link:hover .artwork-item__img {
+  transform: scale(1.04);
+}
+
+.artwork-item__cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 3px;
+  transition: opacity 0.2s;
+}
+.artwork-item__cta:hover { opacity: 0.6; }
+
+/* ============================================================
+   ARTWORK DETAIL PAGE (Paintings — main viewer + thumbnails)
+   ============================================================ */
+.artwork-detail {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 3.5rem 2rem 6rem;
+}
+
+.artwork-detail__gallery {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.artwork-detail__thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.artwork-detail__thumb {
+  padding: 0;
+  border: 1px solid var(--border);
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  transition: border-color 0.2s, opacity 0.2s;
+  opacity: 0.7;
+}
+.artwork-detail__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.artwork-detail__thumb:hover { opacity: 1; }
+.artwork-detail__thumb.is-active {
+  border-color: var(--text);
+  opacity: 1;
+}
+
+.artwork-detail__main {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  /* Fixed "blanket" area — constant height regardless of image aspect
+     ratio, so swapping thumbnails never shifts the text below. */
+  aspect-ratio: 4 / 3;
+  max-height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.artwork-detail__main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.artwork-detail__zoom-hint {
+  position: absolute;
+  bottom: 0.9rem;
+  right: 0.9rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: rgba(26,26,26,0.7);
+  padding: 0.4rem 0.7rem;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity 0.25s;
+}
+.artwork-detail__main:hover .artwork-detail__zoom-hint { opacity: 0; }
+
+.artwork-detail__desc {
+  max-width: 60ch;
+  margin: 2.5rem auto 0;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .artwork-detail { padding: 2rem 1.25rem 4rem; }
+  .artwork-detail__gallery {
+    grid-template-columns: 1fr;
+  }
+  .artwork-detail__thumbs {
+    flex-direction: row;
+    order: 2;
+  }
+  .artwork-detail__thumb {
+    width: 72px;
+    flex: 0 0 auto;
+  }
+  .artwork-detail__main { order: 1; }
+  .artwork-detail__desc { text-align: left; }
+}
+
+/* ============================================================
+   FULLSCREEN ZOOM / PAN VIEWER (Paintings)
+   ============================================================ */
+.viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  background: rgba(10, 10, 10, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease);
+}
+.viewer.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.viewer__canvas {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+  cursor: grab;
+}
+.viewer__canvas.is-panning { cursor: grabbing; }
+
+.viewer__img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  transform-origin: center center;
+  user-select: none;
+  -webkit-user-drag: none;
+  will-change: transform;
+}
+
+.viewer__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  width: 46px;
+  height: 46px;
+  z-index: 2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.2s, transform 0.2s;
+}
+.viewer__close:hover { color: #fff; transform: rotate(90deg); }
+.viewer__close svg {
+  width: 26px; height: 26px;
+  stroke: currentColor; stroke-width: 1.5; fill: none;
+}
+
+.viewer__hint {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.3s;
 }
 
 /* ============================================================
@@ -593,7 +920,7 @@ body.fade-out {
 .about-divider {
   width: 32px;
   height: 1px;
-  background: var(--accent);
+  background: var(--text);
   margin: 2rem 0;
 }
 
@@ -606,7 +933,7 @@ body.fade-out {
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text);
 }
 .about-detail__val {
   font-size: 0.92rem;
@@ -650,7 +977,6 @@ body.fade-out {
    FOOTER
    ============================================================ */
 .footer {
-  border-top: 1px solid var(--border);
   padding: 2rem;
 }
 
@@ -666,7 +992,7 @@ body.fade-out {
 
 .footer__copy {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--text);
   letter-spacing: 0.05em;
 }
 
@@ -677,12 +1003,16 @@ body.fade-out {
 
 .footer__links a {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--text);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s ease;
+  display: inline-block;
 }
-.footer__links a:hover { color: var(--text); }
+.footer__links a:hover {
+  color: var(--text);
+  transform: scale(1.05);
+}
 
 /* ============================================================
    RESPONSIVE — TABLET

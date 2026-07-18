@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gallery — Original art by Jas Rogers. Browse Sketches and Paintings." />
+  <meta name="description" content="Blanket Two — Original painting by Jas Rogers." />
   <meta name="theme-color" content="#F5F0EB" />
-  <title>Gallery — Art by Arianne</title>
+  <title>Blanket Two — Art <span class="nav__by">by</span> Arianne</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
@@ -16,7 +16,7 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav__inner">
         <a href="index.html" class="nav__logo">
-          <img src="images/logo-rat.png" alt="Art by Arianne logo" class="nav__logo-img" />
+          <img src="images/logo-rat.png" alt="Art <span class="nav__by">by</span> Arianne logo" class="nav__logo-img" />
           Art <span class="nav__by">by</span> Arianne
         </a>
 
@@ -47,30 +47,38 @@
   <main class="page">
 
     <div class="gallery-hero">
-      <p class="section-label">Works by Jas Rogers</p>
-      <h1 class="section-title">Gallery</h1>
+      <p class="section-label"><a href="paintings.html" class="breadcrumb">Paintings</a></p>
+      <h1 class="section-title">Blanket Two</h1>
     </div>
 
-    <section class="gallery-index" aria-label="Gallery sections">
-      <a href="paintings.html" class="gallery-index__card">
-        <div class="gallery-index__img-wrap">
-          <img src="images/painting-3-main.jpg" alt="Preview of Paintings collection" class="gallery-index__img" loading="lazy" />
-        </div>
-        <div class="gallery-index__label">
-          <p class="gallery-index__name">Paintings</p>
-          <p class="gallery-index__sub"></p>
-        </div>
-      </a>
+    <section class="artwork-detail">
 
-      <a href="sketches.html" class="gallery-index__card">
-        <div class="gallery-index__img-wrap">
-          <img src="images/artwork-1.jpg" alt="Preview of Sketches collection" class="gallery-index__img" loading="lazy" />
+      <div class="artwork-detail__gallery" data-viewer>
+        <div class="artwork-detail__thumbs" role="list" aria-label="Image views">
+          <button type="button" class="artwork-detail__thumb is-active" role="listitem" aria-current="true"
+                  data-full="images/painting-2-main.jpg" data-alt="Painting 02 — full view">
+            <img src="images/painting-2-main.jpg" alt="Painting 02 — full view thumbnail" />
+          </button>
+          <button type="button" class="artwork-detail__thumb" role="listitem" aria-current="false"
+                  data-full="images/painting-2-detail.jpg" data-alt="Painting 02 — detail view">
+            <img src="images/painting-2-detail.jpg" alt="Painting 02 — detail view thumbnail" />
+          </button>
         </div>
-        <div class="gallery-index__label">
-          <p class="gallery-index__name">Sketches</p>
-          <p class="gallery-index__sub"></p>
+
+        <div class="artwork-detail__main" role="button" tabindex="0"
+             aria-label="Zoom painting 02 — click to open full screen viewer">
+          <img id="viewer-main" class="artwork-detail__main-img"
+               src="images/painting-2-main.jpg" alt="Painting 02 — full view" />
+          <span class="artwork-detail__zoom-hint" aria-hidden="true">Click to zoom</span>
         </div>
-      </a>
+      </div>
+
+      <p class="artwork-detail__desc">
+        Blocks of gold, wine and midnight blue sit shoulder to shoulder, their frames scrolling with
+        paisley and trailing vine. The repeated squares feel at once formal and hand-worn, like a
+        treasured textile recalled from memory rather than copied.
+      </p>
+
     </section>
 
   </main>
@@ -78,7 +86,7 @@
   <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="footer__inner">
-      <p class="footer__copy">&copy; 2028 Art by Arianne &mdash; Jas</p>
+      <p class="footer__copy">&copy; 2028 Art <span class="nav__by">by</span> Arianne &mdash; Jas</p>
       <nav class="footer__links" aria-label="Footer navigation">
         <a href="gallery.html" data-text="Gallery">Gallery</a>
         <a href="about.html" data-text="About">About</a>
@@ -88,5 +96,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/artwork.js"></script>
 </body>
 </html>

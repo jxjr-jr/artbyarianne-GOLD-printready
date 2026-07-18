@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Paintings — Original paintings by Jas Rogers." />
+  <meta name="theme-color" content="#F5F0EB" />
+  <title>Paintings — Art by Arianne</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-rat.png" alt="Art by Arianne logo" class="nav__logo-img" />
+          Art <span class="nav__by">by</span> Arianne
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" data-text="Home">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="about.html" data-text="About">About</a></li>
+          <li><a href="contact.html" data-text="Contact">Contact</a></li>
+        </ul>
+
+        <button class="nav__burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+      <a href="index.html" data-text="Home">Home</a>
+      <a href="gallery.html" data-text="Gallery">Gallery</a>
+      <a href="about.html" data-text="About">About</a>
+      <a href="contact.html" data-text="Contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main class="page">
+
+    <div class="gallery-hero">
+      <p class="section-label"><a href="gallery.html" class="breadcrumb">Gallery</a></p>
+      <h1 class="section-title">Paintings</h1>
+    </div>
+
+    <section class="gallery-list" aria-label="Painting artworks">
+
+      <!-- 01 -->
+      <article class="artwork-item">
+        <a href="painting-1.html" class="artwork-item__link" aria-label="View painting 01">
+          <img src="images/painting-1-main.jpg"
+               alt="Painting 01 — woven panels of grey, indigo and oxblood, each carrying an ornate damask medallion"
+               class="artwork-item__img" loading="lazy" />
+        </a>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">Painting</p>
+          <h2 class="artwork-item__title">Blanket One</h2>
+          <a href="painting-1.html" class="artwork-item__cta">View artwork</a>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="artwork-item">
+        <a href="painting-2.html" class="artwork-item__link" aria-label="View painting 02">
+          <img src="images/painting-2-main.jpg"
+               alt="Painting 02 — blocks of gold, wine and midnight blue with scrolling paisley borders"
+               class="artwork-item__img" loading="lazy" />
+        </a>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">Painting</p>
+          <h2 class="artwork-item__title">Blanket Two</h2>
+          <a href="painting-2.html" class="artwork-item__cta">View artwork</a>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="artwork-item">
+        <a href="painting-3.html" class="artwork-item__link" aria-label="View painting 03">
+          <img src="images/painting-3-main.jpg"
+               alt="Painting 03 — dense patchwork collage of bandana squares in reds, blues and florals"
+               class="artwork-item__img" loading="lazy" />
+        </a>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">Painting</p>
+          <h2 class="artwork-item__title">Hippy Pants</h2>
+          <a href="painting-3.html" class="artwork-item__cta">View artwork</a>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="artwork-item">
+        <a href="painting-4.html" class="artwork-item__link" aria-label="View painting 04">
+          <img src="images/painting-4-main.jpg"
+               alt="Painting 04 — a ceremonial rug with mirrored tribal medallions on a deep red field"
+               class="artwork-item__img" loading="lazy" />
+        </a>
+        <div class="artwork-item__info">
+          <p class="artwork-item__number">Painting</p>
+          <h2 class="artwork-item__title">Footstool</h2>
+          <a href="painting-4.html" class="artwork-item__cta">View artwork</a>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2028 Art by Arianne &mdash; Jas</p>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="gallery.html" data-text="Gallery">Gallery</a>
+        <a href="about.html" data-text="About">About</a>
+        <a href="contact.html" data-text="Contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

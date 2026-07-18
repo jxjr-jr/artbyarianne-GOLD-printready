@@ -17,14 +17,14 @@
       <div class="nav__inner">
         <a href="index.html" class="nav__logo">
           <img src="images/logo-rat.png" alt="Art by Arianne logo" class="nav__logo-img" />
-          Art by Arianne
+          Art <span class="nav__by">by</span> Arianne
         </a>
 
         <ul class="nav__links" role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-text="Home">Home</a></li>
+          <li><a href="gallery.html" data-text="Gallery">Gallery</a></li>
+          <li><a href="about.html" data-text="About">About</a></li>
+          <li><a href="contact.html" data-text="Contact">Contact</a></li>
         </ul>
 
         <button class="nav__burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -36,10 +36,10 @@
     </nav>
 
     <div class="nav__mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-text="Home">Home</a>
+      <a href="gallery.html" data-text="Gallery">Gallery</a>
+      <a href="about.html" data-text="About">About</a>
+      <a href="contact.html" data-text="Contact">Contact</a>
     </div>
   </header>
 
@@ -49,10 +49,10 @@
 
       <!-- Sticky portrait image -->
       <aside class="about-image">
-        <img src="images/artwork-6.jpg"
-             alt="Close Work — ink sketch of an artist leaning in closely to examine a canvas"
+        <img src="images/artwork-5.jpg"
+             alt="Together — ink sketch of two people sitting under a hanging plant"
              class="about-image__img" />
-        <p class="about-image__caption">Close Work, 2024 &mdash; detail</p>
+        <p class="about-image__caption">Together</p>
       </aside>
 
       <!-- Text content -->
@@ -60,24 +60,37 @@
         <p class="section-label">The artist</p>
         <h1 class="section-title">Jas</h1>
 
+        <p><strong>My Creative Practice</strong></p>
+
         <p>
-          Jas is an independent artist working primarily in acrylic. Her practice centres
-          on the accurate representation of fabrics and textiles, exploring
-          the subtle interplay of light, pattern, and form.
+          I&rsquo;m not yet a full&#8209;fledged artist who creates everything freehand from scratch &mdash; though I hope to be one day. For now, I do my best to capture and preserve patterns and colour sequences created by others, especially in materials I&rsquo;m deeply drawn to. Re&#8209;creating these designs in vibrant, like&#8209;for&#8209;like paintings brings me delight. It shines a light on what already brings me joy, doubling it and giving the original design a well&#8209;deserved shout&#8209;out. <em>(I use basic acrylic paints on black paper, and offer reproduction prints that match the size of the original.)</em>
         </p>
 
         <p>
-          She finds most of her subjects in warm interior spaces &mdash; in vintage furniture,
-          utility fabrics, and the lived-in textures of domestic comfort. Each work is
-          a careful study of material and moment.
+          Simple dot mandalas are also calming for me. <em>(I&rsquo;ve enjoyed using acrylic paint on canvas, black or brown paper, and painted rocks. These aren&rsquo;t for sale &mdash; I usually keep dot painting as an occasional way to hand&#8209;make cards.)</em>
+        </p>
+
+        <p>
+          Another dimension of my creative work is self&#8209;expression and healing through basic sketching. When intuitive thoughts and emotions overwhelm me, drawing them out with a fine&#8209;liner pen on high&#8209;quality art paper helps them exit my mind and exist somewhere else. Not just separate from me, but in a dignified, understandable way for anyone experiencing something similar &mdash; and even as a way to explain to someone who may never truly know what it feels like. <em>(These sketches aren&rsquo;t for sale; they&rsquo;re private journaling pieces shared only with those close to me.)</em>
+        </p>
+
+        <p>
+          Healing art isn&rsquo;t only for difficult moments. I also use it to focus on positives &mdash; joy, gratitude, and the captured moments of my highs. These pieces express my innermost motives and love, motivated by loyalty and commitment. They are a thank&#8209;you to John for becoming the person I love and trust, and a hope that we can continue building happiness together, eternally united in joy. They&rsquo;re about capturing new, pure memories: noticing them, recalling them, cherishing them. <em>(These small fine&#8209;liner sketches, often based on photos on my phone, are given to John as little &ldquo;work snack notes.&rdquo; Not for sale, but happy to share.)</em>
         </p>
 
         <div class="about-divider"></div>
 
-        <div class="about-detail" style="margin-bottom:1.4rem;">
-          <span class="about-detail__label">Medium</span>
-          <span class="about-detail__val">Acrylic on paper</span>
-        </div>
+        <p><strong>About me:</strong></p>
+
+        <p>
+          Born in 1998 with Dutch, English, Italian, and Maltese heritage, I grew up in Melbourne&rsquo;s inner&#8209;west and now live in Moonee Ponds, VIC. I&rsquo;m happily settled here with my handsome husband, who shares my spiritual identity as one of Jehovah&rsquo;s Witnesses. I&rsquo;m also a qualified disability support worker, grateful for the chance to assist wonderful individuals I genuinely connect with.
+        </p>
+
+        <p>
+          Art has been a joy since childhood, and that passion never faded. Although I&rsquo;m not a career artist, I rediscovered the hobby as an adult and reignited the satisfaction that comes from creating. I rarely go long without a painting project underway &mdash; even if the larger pieces sometimes wait weeks for me to return to them. They sit patiently, whilst I grow impatient wanting a chance to work on them again. At least I can draw in the meantime if I so feel inclined or have the need to therapeutically.
+        </p>
+
+        <div class="about-divider"></div>
 
         <div class="about-detail" style="margin-bottom:2rem;">
           <span class="about-detail__label">Based in</span>
@@ -95,9 +108,9 @@
     <div class="footer__inner">
       <p class="footer__copy">&copy; 2028 Art by Arianne &mdash; Jas</p>
       <nav class="footer__links" aria-label="Footer navigation">
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="gallery.html" data-text="Gallery">Gallery</a>
+        <a href="about.html" data-text="About">About</a>
+        <a href="contact.html" data-text="Contact">Contact</a>
       </nav>
     </div>
   </footer>
