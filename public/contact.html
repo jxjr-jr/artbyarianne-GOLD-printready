@@ -8,6 +8,22 @@
   <title>Contact — Art by Arianne</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
+  <style>
+    /* Force the gradient on the root elements */
+    html, body {
+      background: linear-gradient(180deg, #F2F0EF 0%, #DAD4D2 100%) !important;
+      background-attachment: fixed !important;
+      min-height: 100vh !important;
+    }
+
+    /* Force all major wrapper elements to be transparent so the gradient is visible */
+    body > main,
+    body > div,
+    .wrapper,
+    .container {
+      background-color: transparent !important;
+    }
+  </style>
 </head>
 <body class="contact-page">
 
