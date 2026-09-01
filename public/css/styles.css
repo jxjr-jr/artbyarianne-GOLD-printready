@@ -669,6 +669,26 @@ body.fade-out {
   object-fit: contain;
 }
 
+.artwork-detail__inquire {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid var(--text);
+  border-radius: 999px;
+  color: var(--text);
+  background: transparent;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.artwork-detail__inquire:hover,
+.artwork-detail__inquire:focus-visible {
+  background-color: var(--text);
+  color: var(--bg);
+  transform: scale(1.03);
+}
+
 .artwork-detail__zoom-hint {
   position: absolute;
   bottom: 0.9rem;
@@ -708,6 +728,11 @@ body.fade-out {
     flex: 0 0 auto;
   }
   .artwork-detail__main { order: 1; }
+  .artwork-detail__inquire {
+    display: block;
+    width: fit-content;
+    margin-top: 1rem;
+  }
   .artwork-detail__desc { text-align: left; }
 }
 
