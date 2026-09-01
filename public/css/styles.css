@@ -674,7 +674,7 @@ body.fade-out {
   margin-top: 1rem;
   padding: 0.7rem 1.15rem;
   border: 1px solid var(--text);
-  border-radius: 999px;
+  border-radius: 0;
   color: var(--text);
   background: transparent;
   font-size: 0.78rem;
